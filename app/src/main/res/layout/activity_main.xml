@@ -1,12 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.example.select.a3dgame.MainActivity">
 
+    <RadioGroup
+        android:id="@+id/rg_main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:background="#000"
+        android:orientation="horizontal">
 
+        <RadioButton
+            android:id="@+id/rb_main_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/main_bottom_title"
+            android:gravity="center"
+            android:text="文章"
+            android:textColor="#fff"
+            android:textSize="20sp"/>
 
-</LinearLayout>
+        <RadioButton
+            android:id="@+id/rb_main_bbs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/main_bottom_bbs"
+            android:gravity="center"
+            android:text="论坛"
+            android:textColor="#fff"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_main_game"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/main_botoom_game"
+            android:gravity="center"
+            android:text="游戏"
+            android:textColor="#fff"
+            android:textSize="20sp"/>
+    </RadioGroup>
+    <FrameLayout
+        android:layout_above="@id/rg_main_bottom"
+        android:id="@+id/fl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+</RelativeLayout>
